@@ -1,0 +1,62 @@
+﻿<Window x:Class="VesterhavsHyttenMainWindow.GrundWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VesterhavsHyttenMainWindow"
+        mc:Ignorable="d"
+        Title="GrundWindow" Height="459" Width="759">
+    <Grid>
+        <GroupBox x:Name="groupBoxGrund" Header="Grund" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Height="281" Width="359">
+            <Grid x:Name="gridOpretGrund" HorizontalAlignment="Left" Height="249" Margin="0,10,-2,0" VerticalAlignment="Top" Width="349">
+                <TextBox IsReadOnly="True" x:Name="txtGrundId" HorizontalAlignment="Left" Height="23" Margin="99,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Background="LightGray"/>
+                <TextBox x:Name="txtGrundTillaeg" HorizontalAlignment="Left" Height="23" Margin="99,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Id:"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Tillæg:" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtGrundAreal" HorizontalAlignment="Left" Height="23" Margin="99,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+                <TextBox MaxLength="4" x:Name="txtGrundPostnr" HorizontalAlignment="Left" Height="23" Margin="99,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Areal:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Postnr:" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtGrundBy" HorizontalAlignment="Left" Height="23" Margin="99,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+                <TextBox x:Name="txtGrundAdresse" HorizontalAlignment="Left" Height="23" Margin="99,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="By"/><Run Text=":"/></TextBlock>
+                <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="10,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Adresse:"/><Run Text=":"/></TextBlock>
+                <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="302,38,0,0" TextWrapping="Wrap" Text="kr." VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxFilial" Header="Filial" HorizontalAlignment="Left" Margin="374,137,0,0" VerticalAlignment="Top" Width="367" Height="281">
+            <Grid x:Name="gridRight" HorizontalAlignment="Left" Height="248" Margin="0,10,-2,0" VerticalAlignment="Top" Width="357">
+                <TextBox x:Name="txtFilialId" HorizontalAlignment="Left" Height="23" Margin="92,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" IsReadOnly="True" Background="LightGray"/>
+                <TextBox x:Name="txtFilialNavn" HorizontalAlignment="Left" Height="23" Margin="92,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" IsReadOnly="True" Background="LightGray"/>
+                <TextBox x:Name="txtFilialAdresse" HorizontalAlignment="Left" Height="23" Margin="92,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" IsReadOnly="True" Background="LightGray"/>
+                <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="FirmaId:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" Text="Navn:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy8" HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" Text="Adresse:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy9" HorizontalAlignment="Left" Margin="10,95,0,0" TextWrapping="Wrap" Text="Telefon:" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtFilialTelefon" HorizontalAlignment="Left" Height="23" Margin="92,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" IsReadOnly="True" Background="LightGray"/>
+                <TextBox x:Name="txtFilialPostnr" HorizontalAlignment="Left" Height="23" Margin="92,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" IsReadOnly="True" Background="LightGray"/>
+                <TextBox x:Name="txtFilialBy" HorizontalAlignment="Left" Height="23" Margin="92,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" IsReadOnly="True" Background="LightGray"/>
+                <TextBlock x:Name="textBlock_Copy10" HorizontalAlignment="Left" Margin="10,123,0,0" TextWrapping="Wrap" Text="Postnr:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy11" HorizontalAlignment="Left" Margin="10,151,0,0" TextWrapping="Wrap" Text="By:" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtFilialMail" HorizontalAlignment="Left" Height="23" Margin="92,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" IsReadOnly="True" Background="LightGray"/>
+                <TextBlock x:Name="textBlock_Copy12" HorizontalAlignment="Left" Margin="10,179,0,0" TextWrapping="Wrap" Text="Mail:" VerticalAlignment="Top"/>
+                <Button x:Name="btnTilbage" Content="&lt;" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="75" Click="btnTilbage_Click"/>
+                <Button x:Name="btnFrem" Content="&gt;" HorizontalAlignment="Left" Margin="272,218,0,0" VerticalAlignment="Top" Width="75" Click="btnFrem_Click"/>
+            </Grid>
+        </GroupBox>
+        <CheckBox x:Name="chkRediger" Content="Rediger grund" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Checked="chkRediger_Checked"/>
+        <CheckBox x:Name="chkOpret" Content="Opret grund" HorizontalAlignment="Left" Margin="132,115,0,0" VerticalAlignment="Top" Checked="chkOpret_Checked"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="329,112,0,0" VerticalAlignment="Top" Width="146" Click="btnSubmit_Click"/>
+        <DataGrid SelectionMode="Single" IsReadOnly="True" x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="100" Width="731" AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Adresse" Binding="{Binding Adresse}"/>
+                <DataGridTextColumn Header="Postnr" Binding="{Binding Postnr.postnr}"/>
+                <DataGridTextColumn Header="By" Binding="{Binding Postnr.Navn}"/>
+                <DataGridTextColumn Header="Filial" Binding="{Binding Filial}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <CheckBox x:Name="chkSletGrund" Content="Slet grund" HorizontalAlignment="Left" Margin="234,115,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

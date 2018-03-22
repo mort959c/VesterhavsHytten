@@ -1,0 +1,131 @@
+﻿<Window x:Class="VesterhavsHyttenMainWindow.SaelgHusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VesterhavsHyttenMainWindow"
+        mc:Ignorable="d"
+        Title="SaelgHusWindow" Height="800" Width="720">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="360*"/>
+            <RowDefinition Height="360*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox BorderThickness="2" x:Name="groupBoxHustyper" Header="Udbyder" HorizontalAlignment="Left" VerticalAlignment="Top" Height="334" Width="346" FontSize="12" Margin="5,0,0,0" BorderBrush="Red">
+            <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridUdbyder" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="289" Width="316" SelectionChanged="dataGridUdbyder_SelectionChanged">
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Style.Triggers>
+                            <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                <Setter Property="Background" Value="LightCoral"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="FilialNavn" Binding="{Binding Filial.Navn}"/>
+                    <DataGridTextColumn Header="Telefon" Binding="{Binding Filial.Telefon}"/>
+                    <DataGridTextColumn Header="Pris" Binding="{Binding Pris}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <GroupBox BorderBrush="Yellow" BorderThickness="2" x:Name="groupBoxKunder" Header="Kunder" HorizontalAlignment="Left" VerticalAlignment="Top" Height="334" Width="346" Grid.Column="1" FontSize="12" Margin="5,0,0,0">
+            <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridKunder" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="289" Width="316">
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Style.Triggers>
+                            <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                <Setter Property="Background" Value="LightCoral"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Navn" Binding="{Binding Navn}"/>
+                    <DataGridTextColumn Header="Adresse" Binding="{Binding Adresse}"/>
+                    <DataGridTextColumn Header="Postnr" Binding="{Binding Postnr.postnr}"/>
+                    <DataGridTextColumn Header="Telefon" Binding="{Binding Telefon}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <GroupBox BorderBrush="Blue" BorderThickness="2" x:Name="groupBoxSalg" Header="Salg" HorizontalAlignment="Left" VerticalAlignment="Top" Height="334" Width="346" Grid.Column="1" Grid.Row="1" FontSize="12" Margin="5,0,0,0">
+            <Grid HorizontalAlignment="Left" Height="311" Margin="0,0,-2,0" VerticalAlignment="Top" Width="336">
+                <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridSalg" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="163" Width="316" SelectionChanged="dataGridSalg_SelectionChanged">
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Style.Triggers>
+                                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                    <Setter Property="Background" Value="LightCoral"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="KundeId" Binding="{Binding Kunde.Id}"/>
+                        <DataGridTextColumn Header="GrundId" Binding="{Binding Grund.Id}"/>
+                        <DataGridTextColumn Header="HustypeId" Binding="{Binding HusType.Id}"/>
+                        <DataGridTextColumn Header="Beløb" Binding="{Binding Beløb}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,183,0,0" TextWrapping="Wrap" Text="KundeNavn:" VerticalAlignment="Top"/>
+                <Label x:Name="lblKundeNavn" Content="" HorizontalAlignment="Left" Margin="92,178,0,0" VerticalAlignment="Top" Width="234"/>
+                <Label x:Name="lblGrundAdresse" Content="" HorizontalAlignment="Left" Margin="92,209,0,0" VerticalAlignment="Top" Width="234"/>
+                <Label x:Name="lblHustypeNavn" Content="" HorizontalAlignment="Left" Margin="92,240,0,0" VerticalAlignment="Top" Width="234"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,214,0,0" TextWrapping="Wrap" Text="GrundAdresse:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="10,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="HustypeNavn"/><Run Text=":"/></TextBlock>
+            </Grid>
+        </GroupBox>
+        <GroupBox BorderBrush="Green" BorderThickness="2" x:Name="groupBoxGrund" Header="Grunde og hustyper" HorizontalAlignment="Left" VerticalAlignment="Top" Height="334" Width="346" Grid.Row="1" FontSize="12" Margin="5,0,0,0">
+            <Grid HorizontalAlignment="Left" Height="297" Margin="10,10,-2,0" VerticalAlignment="Top" Width="326">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridGrunde" HorizontalAlignment="Left" VerticalAlignment="Top" Height="129" Width="316" FontSize="12" Margin="0,16,0,0">
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Style.Triggers>
+                                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                    <Setter Property="Background" Value="LightCoral"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="Adresse" Binding="{Binding Adresse}"/>
+                        <DataGridTextColumn Header="Postnr" Binding="{Binding Postnr.postnr}"/>
+                        <DataGridTextColumn Header="By" Binding="{Binding Postnr.Navn}"/>
+                        <DataGridTextColumn Header="Areal" Binding="{Binding Areal}"/>
+                        <DataGridTextColumn Header="Tillæg" Binding="{Binding Tillæg}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridHustyper" HorizontalAlignment="Left" Margin="0,161,0,0" VerticalAlignment="Top" Height="136" Width="316">
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Style.Triggers>
+                                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                    <Setter Property="Background" Value="LightCoral"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                        <DataGridTextColumn Header="Etager" Binding="{Binding Etager}"/>
+                        <DataGridTextColumn Header="Areal" Binding="{Binding Areal}"/>
+                        <DataGridTextColumn Header="Navn" Binding="{Binding Navn}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,145,0,0" TextWrapping="Wrap" Text="Hustyper" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Grunde" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btnSaelg" Content="Sælg" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="130" Height="60" FontSize="22" FontWeight="Bold" Click="btnSaelg_Click"/>
+    </Grid>
+</Window>

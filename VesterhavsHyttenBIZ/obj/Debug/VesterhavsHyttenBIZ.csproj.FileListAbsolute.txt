@@ -1,0 +1,10 @@
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\bin\Debug\VesterhavsHyttenBIZ.dll
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\bin\Debug\VesterhavsHyttenBIZ.pdb
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\obj\Debug\VesterhavsHyttenBIZ.csprojResolveAssemblyReference.cache
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\obj\Debug\VesterhavsHyttenBIZ.dll
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\obj\Debug\VesterhavsHyttenBIZ.pdb
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\bin\Debug\VesterhavsHyttenBIZ.dll
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\bin\Debug\VesterhavsHyttenBIZ.pdb
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\obj\Debug\VesterhavsHyttenBIZ.csprojResolveAssemblyReference.cache
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\obj\Debug\VesterhavsHyttenBIZ.dll
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenBIZ\obj\Debug\VesterhavsHyttenBIZ.pdb

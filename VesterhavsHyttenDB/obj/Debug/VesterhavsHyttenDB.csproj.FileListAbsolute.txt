@@ -1,0 +1,14 @@
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenDB.dll
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenDB.pdb
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenBIZ.dll
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenBIZ.pdb
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\obj\Debug\VesterhavsHyttenDB.csprojResolveAssemblyReference.cache
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\obj\Debug\VesterhavsHyttenDB.dll
+\\cv.local\dfs\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\obj\Debug\VesterhavsHyttenDB.pdb
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenDB.dll
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenDB.pdb
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenBIZ.dll
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\bin\Debug\VesterhavsHyttenBIZ.pdb
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\obj\Debug\VesterhavsHyttenDB.csprojResolveAssemblyReference.cache
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\obj\Debug\VesterhavsHyttenDB.dll
+\\data.cv.local\Students\mort959c\Documents\Visual Studio 2015\Projects\VesterhavsHytten\VesterhavsHyttenDB\obj\Debug\VesterhavsHyttenDB.pdb

@@ -1,0 +1,35 @@
+﻿<Window x:Class="VesterhavsHyttenMainWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VesterhavsHyttenMainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="524">
+    <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox x:Name="cboAdmin" Content="Admin" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" FontSize="16" Checked="cboPermision_checked"/>
+        <CheckBox x:Name="cboMedarbejder" Content="Medarbejder" HorizontalAlignment="Left" Margin="21,28,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="16" Checked="cboPermision_checked"/>
+        <CheckBox x:Name="cboEksternInter" Content="Ekstern&#xD;&#xA;interessent" HorizontalAlignment="Left" Margin="20,28,0,0" VerticalAlignment="Top" Grid.Column="2" FontSize="16" Checked="cboPermision_checked"/>
+        <Grid x:Name="gridAdmin" HorizontalAlignment="Left" Height="234" Margin="10,75,0,0" VerticalAlignment="Top" Width="152" Visibility="{Binding ElementName=cboAdmin, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Button x:Name="btnAdminHustype" Content="Opret/Slet hustype" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="132" Height="44" FontSize="14" Click="btnAdminHustype_Click"/>
+            <Button x:Name="btnAdminGrund" Content="Opret/Slet grund" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="132" Height="44" FontSize="14" Click="btnGrund_Clicked"/>
+        </Grid>
+        <Grid x:Name="gridMedarbejder" HorizontalAlignment="Left" Height="234" Margin="10,75,0,0" VerticalAlignment="Top" Width="152" Grid.Column="1" Visibility="{Binding ElementName=cboMedarbejder, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Button x:Name="btnMedarbejderSaelgHus" Content="Sælg hus" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="132" Height="44" FontSize="14" Click="btnMedarbejderSaelgHus_Click"/>
+            <Button x:Name="btnMedarbejderGrund" Content="Opret/Slet grund" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="132" Height="44" FontSize="14" Click="btnGrund_Clicked"/>
+            <Button x:Name="btnMedarbejderForspoergelser" Content="Forespørgelser" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Width="132" Height="44" FontSize="14" Click="btnForspoergelser_Clicked"/>
+        </Grid>
+        <Grid x:Name="gridEksternInter" HorizontalAlignment="Left" Height="234" Margin="10,75,0,0" VerticalAlignment="Top" Width="152" Grid.Column="2" Visibility="{Binding ElementName=cboEksternInter, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Button x:Name="btnEksterninter" Content="Forespørgelser" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="132" Height="44" FontSize="14" Click="btnForspoergelser_Clicked"/>
+        </Grid>
+
+    </Grid>
+</Window>
